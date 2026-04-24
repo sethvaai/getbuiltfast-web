@@ -72,9 +72,26 @@ function PricingRow({ row, index }: { row: (typeof pricingData)[0]; index: numbe
       </td>
       <td style={{ padding: "1rem 0", textAlign: "right" }}>
         <button
-          onClick={() =>
-            document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
-          }
+          onClick={async () => {
+            try {
+              const res = await fetch("/api/checkout", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ tier: row.key }),
+              });
+              const data = (await res.json()) as { url?: string; error?: string };
+              if (data.url) {
+                window.location.href = data.url;
+              } else {
+                // Checkout not configured yet — fall back to brief wizard
+                console.warn("Checkout unavailable:", data.error);
+                window.location.href = "/start";
+              }
+            } catch (e) {
+              console.error("Checkout request failed:", e);
+              window.location.href = "/start";
+            }
+          }}
           style={{
             padding: "8px 16px",
             fontSize: "0.78rem",
