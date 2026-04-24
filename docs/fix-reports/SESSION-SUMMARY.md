@@ -9,6 +9,7 @@ Autonomous session. 8 fixes shipped as local branches; Zal pushes on return.
 | 1     | Footer cleanup + Ligo note              | `fix-1-footer-cleanup`        | `4974e36` | local     |
 | 8     | Branded favicon (lightning bolt SVG)    | `fix-8-favicon`               | `80aa235` | local     |
 | 2     | Pricing single source of truth          | `fix-2-pricing-consistency`   | `eee5b54` | local     |
+| 2b    | Landing Page €299 → €499 correction     | (on fix-2, fix-7, fix-6)      | 3 commits | local     |
 | 3     | Contact form centering                  | `fix-3-form-centering`        | `7f91a13` | local     |
 | 5     | Light mode audit                        | `fix-5-light-mode-audit`      | `2d0d3b9` | local     |
 | 4     | Portfolio mockup screenshots            | `fix-4-portfolio-mockups`     | `9c2696e` | local     |
@@ -17,6 +18,8 @@ Autonomous session. 8 fixes shipped as local branches; Zal pushes on return.
 | 9     | Client dashboard wireframe (docs only)  | `fix-9-wireframe-only`        | `77a073d` | local     |
 | 10    | Social proof tagline — no action        | —                             | —         | —         |
 | docs  | This summary + all per-fix reports      | `docs-session-reports`        | (pending) | local     |
+
+**Fix 2b commits:** `61508b7` on fix-2, `226ffd9` on fix-7, `0f357a0` on fix-6.
 
 ## Session-wide blocker
 
