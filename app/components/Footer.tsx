@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GitFork, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -49,18 +49,6 @@ export default function Footer() {
               <Mail size={14} />
               hello@get-built-fast.com
             </a>
-            <a
-              href="https://github.com/sethvaai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 transition-colors"
-              style={{ color: "var(--text-muted)" }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text)")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
-            >
-              <GitFork size={14} />
-              GitHub
-            </a>
           </div>
         </div>
 
@@ -68,15 +56,7 @@ export default function Footer() {
           className="mt-8 pt-6 text-center text-xs"
           style={{ borderTop: "1px solid var(--border)", color: "var(--text-muted)" }}
         >
-          GetBuiltFast © 2026 — Powered by{" "}
-          <a
-            href="https://cindervaleventures.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "var(--accent)" }}
-          >
-            Cinder Vale Ventures BV
-          </a>
+          GetBuiltFast © 2026
         </div>
       </div>
     </footer>
