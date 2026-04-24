@@ -25,7 +25,8 @@ export default function TermsPage() {
           <section>
             <h2 className="text-xl font-bold mb-3" style={{ color: "var(--text)" }}>1. Parties</h2>
             <p>
-              These Terms of Service govern all services provided by <strong style={{ color: "var(--text)" }}>Cinder Vale Ventures BV</strong>,
+              GetBuiltFast is a trade name of <strong style={{ color: "var(--text)" }}>Cinder Vale Ventures BV</strong> (Ligo-registered).
+              These Terms of Service govern all services provided by Cinder Vale Ventures BV,
               operating under the brand name <strong style={{ color: "var(--text)" }}>GetBuiltFast</strong>, registered in the Netherlands
               (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;), to any person or entity (&ldquo;Client&rdquo;, &ldquo;you&rdquo;) engaging our web development services.
             </p>
