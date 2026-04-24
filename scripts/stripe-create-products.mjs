@@ -3,11 +3,11 @@
  * Creates Stripe Products + Prices for all 11 GetBuiltFast tiers.
  *
  * Safety:
- *   - Refuses to run unless STRIPE_SECRET_KEY starts with "sk_test_".
+ *   - Refuses to run unless GBF_STRIPE_SECRET_KEY starts with "sk_test_".
  *   - Skips tiers that already have a Product with the matching name in test mode.
  *
  * Usage:
- *   STRIPE_SECRET_KEY=sk_test_... node scripts/stripe-create-products.mjs
+ *   GBF_STRIPE_SECRET_KEY=sk_test_... node scripts/stripe-create-products.mjs
  *
  * After running, you can configure Checkout to use these products, but the
  * API route in app/api/checkout/route.ts creates price_data inline per session,
@@ -17,13 +17,13 @@
 
 import Stripe from "stripe";
 
-const key = process.env.STRIPE_SECRET_KEY;
+const key = process.env.GBF_STRIPE_SECRET_KEY;
 if (!key) {
-  console.error("STRIPE_SECRET_KEY not set");
+  console.error("GBF_STRIPE_SECRET_KEY not set");
   process.exit(1);
 }
 if (!key.startsWith("sk_test_")) {
-  console.error("Refusing to run: STRIPE_SECRET_KEY must be a TEST key (sk_test_*)");
+  console.error("Refusing to run: GBF_STRIPE_SECRET_KEY must be a TEST key (sk_test_*)");
   console.error("Set test keys first. Live mode requires explicit Zal approval.");
   process.exit(1);
 }

@@ -7,8 +7,8 @@ type SupabaseRestClient = {
 };
 
 export function getSupabase(): SupabaseRestClient | null {
-  const url = process.env.SUPABASE_URL;
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const url = process.env.GBF_SUPABASE_URL;
+  const key = process.env.GBF_SUPABASE_SERVICE_ROLE;
   if (!url || !key) return null;
 
   const base = url.replace(/\/$/, "");

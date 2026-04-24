@@ -84,7 +84,7 @@ export async function POST(req: NextRequest) {
       leadId = data.id;
     }
   } else {
-    console.warn("SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY missing — skipping DB insert");
+    console.warn("GBF_SUPABASE_URL / GBF_SUPABASE_SERVICE_ROLE missing — skipping DB insert");
   }
 
   // Email notification to team + client (skipped if no key)

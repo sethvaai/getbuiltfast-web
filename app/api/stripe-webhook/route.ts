@@ -6,7 +6,7 @@ export const runtime = "nodejs";
 
 export async function POST(req: NextRequest) {
   const stripe = getStripe();
-  const secret = process.env.STRIPE_WEBHOOK_SECRET;
+  const secret = process.env.GBF_STRIPE_WEBHOOK_SECRET;
   if (!stripe || !secret) {
     return NextResponse.json({ error: "webhook not configured" }, { status: 503 });
   }
@@ -35,8 +35,8 @@ export async function POST(req: NextRequest) {
 }
 
 async function persistOrder(session: Stripe.Checkout.Session) {
-  const url = process.env.SUPABASE_URL;
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const url = process.env.GBF_SUPABASE_URL;
+  const key = process.env.GBF_SUPABASE_SERVICE_ROLE;
   if (!url || !key) {
     console.warn("Supabase not configured — skipping order persistence");
     return;
