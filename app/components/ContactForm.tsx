@@ -80,8 +80,8 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-24 px-6" ref={ref}>
-      <div className="max-w-2xl mx-auto">
+    <section id="contact" className="py-24 px-4 sm:px-6" ref={ref}>
+      <div className="max-w-xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
