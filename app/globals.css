@@ -4,26 +4,46 @@
 :root,
 [data-theme="dark"] {
   --bg: #0A0A0A;
+  --bg-alt: #0f0f0f;
   --bg-card: #111117;
   --bg-card-hover: #16161e;
   --text: #ffffff;
   --text-muted: #9ca3af;
+  --text-faint: rgba(255,255,255,0.3);
   --border: rgba(255,255,255,0.08);
+  --border-subtle: rgba(255,255,255,0.06);
+  --hover-tint: rgba(255,255,255,0.05);
   --accent: #00D4FF;
   --accent-hover: #00b8db;
   --nav-bg: rgba(10,10,10,0.85);
+  --mockup-chassis: #1a1a1a;
+  --mockup-chassis-border: #333;
+  --mockup-chassis-detail: #3a3a3a;
+  --mockup-screen-empty: #000;
+  --arrow-bg: rgba(0,0,0,0.6);
+  --arrow-border: rgba(255,255,255,0.15);
 }
 
 [data-theme="light"] {
   --bg: #F5F5F5;
+  --bg-alt: #eaeaea;
   --bg-card: #ffffff;
   --bg-card-hover: #f0f0f0;
   --text: #0A0A0A;
   --text-muted: #6b7280;
+  --text-faint: rgba(10,10,10,0.4);
   --border: rgba(0,0,0,0.08);
+  --border-subtle: rgba(0,0,0,0.06);
+  --hover-tint: rgba(0,0,0,0.04);
   --accent: #00B8D9;
   --accent-hover: #0099b8;
   --nav-bg: rgba(245,245,245,0.85);
+  --mockup-chassis: #d4d4d4;
+  --mockup-chassis-border: #b0b0b0;
+  --mockup-chassis-detail: #909090;
+  --mockup-screen-empty: #e8e8e8;
+  --arrow-bg: rgba(255,255,255,0.85);
+  --arrow-border: rgba(0,0,0,0.15);
 }
 
 /* ─── Base ──────────────────────────────────────────────────────── */
