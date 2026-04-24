@@ -133,7 +133,7 @@ export default function Nav() {
                 height: "36px",
                 borderRadius: "50%",
                 border: "1px solid var(--border)",
-                backgroundColor: "rgba(255,255,255,0.05)",
+                backgroundColor: "var(--hover-tint)",
                 cursor: "pointer",
                 color: "var(--text-muted)",
                 transition: "all 0.2s ease",
@@ -193,7 +193,7 @@ export default function Nav() {
                 height: "34px",
                 borderRadius: "50%",
                 border: "1px solid var(--border)",
-                backgroundColor: "rgba(255,255,255,0.05)",
+                backgroundColor: "var(--hover-tint)",
                 cursor: "pointer",
                 color: "var(--text-muted)",
               }}

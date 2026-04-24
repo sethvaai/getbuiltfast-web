@@ -74,9 +74,9 @@ function MacBookMockup({ screenshot, alt }: { screenshot: string; alt: string })
       <div
         style={{
           width: "clamp(260px, 52vw, 540px)",
-          backgroundColor: "#1a1a1a",
+          backgroundColor: "var(--mockup-chassis)",
           borderRadius: "10px 10px 0 0",
-          border: "2px solid #333",
+          border: "2px solid var(--mockup-chassis-border)",
           padding: "8px 8px 4px 8px",
           position: "relative",
         }}
@@ -90,7 +90,7 @@ function MacBookMockup({ screenshot, alt }: { screenshot: string; alt: string })
             width: "5px",
             height: "5px",
             borderRadius: "50%",
-            backgroundColor: "#3a3a3a",
+            backgroundColor: "var(--mockup-chassis-detail)",
           }}
         />
         <div
@@ -98,7 +98,7 @@ function MacBookMockup({ screenshot, alt }: { screenshot: string; alt: string })
             width: "100%",
             paddingBottom: "62.5%",
             position: "relative",
-            backgroundColor: "#000",
+            backgroundColor: "var(--mockup-screen-empty)",
             borderRadius: "4px",
             overflow: "hidden",
           }}
@@ -122,7 +122,7 @@ function MacBookMockup({ screenshot, alt }: { screenshot: string; alt: string })
         style={{
           width: "clamp(260px, 52vw, 540px)",
           height: "3px",
-          backgroundColor: "#222",
+          backgroundColor: "var(--mockup-chassis-border)",
           borderLeft: "2px solid #333",
           borderRight: "2px solid #333",
         }}
@@ -131,9 +131,9 @@ function MacBookMockup({ screenshot, alt }: { screenshot: string; alt: string })
         style={{
           width: "clamp(280px, 55vw, 570px)",
           height: "12px",
-          backgroundColor: "#1a1a1a",
+          backgroundColor: "var(--mockup-chassis)",
           borderRadius: "0 0 6px 6px",
-          border: "2px solid #333",
+          border: "2px solid var(--mockup-chassis-border)",
           borderTop: "none",
           clipPath: "polygon(1.5% 0%, 98.5% 0%, 100% 100%, 0% 100%)",
         }}
@@ -147,9 +147,9 @@ function IPhoneMockup({ screenshot, alt }: { screenshot: string; alt: string }) 
     <div
       style={{
         width: "clamp(140px, 20vw, 200px)",
-        backgroundColor: "#1a1a1a",
+        backgroundColor: "var(--mockup-chassis)",
         borderRadius: "36px",
-        border: "2px solid #333",
+        border: "2px solid var(--mockup-chassis-border)",
         padding: "20px 10px",
         position: "relative",
         boxShadow: "0 20px 60px rgba(0,0,0,0.5)",
@@ -163,7 +163,7 @@ function IPhoneMockup({ screenshot, alt }: { screenshot: string; alt: string }) 
           transform: "translateX(-50%)",
           width: "56px",
           height: "14px",
-          backgroundColor: "#0a0a0a",
+          backgroundColor: "var(--mockup-screen-empty)",
           borderRadius: "8px",
         }}
       />
@@ -175,7 +175,7 @@ function IPhoneMockup({ screenshot, alt }: { screenshot: string; alt: string }) 
           transform: "translateX(-50%)",
           width: "36px",
           height: "4px",
-          backgroundColor: "#444",
+          backgroundColor: "var(--mockup-chassis-detail)",
           borderRadius: "2px",
         }}
       />
@@ -184,7 +184,7 @@ function IPhoneMockup({ screenshot, alt }: { screenshot: string; alt: string }) 
           width: "100%",
           paddingBottom: "177%",
           position: "relative",
-          backgroundColor: "#000",
+          backgroundColor: "var(--mockup-screen-empty)",
           borderRadius: "26px",
           overflow: "hidden",
         }}
@@ -232,7 +232,7 @@ export default function Portfolio() {
     <section
       id="portfolio"
       style={{
-        backgroundColor: "#0a0a0a",
+        backgroundColor: "var(--bg-alt)",
         paddingBlock: "8rem",
         paddingInline: "2rem",
         overflowX: "hidden",
@@ -262,7 +262,7 @@ export default function Portfolio() {
             style={{
               fontSize: "clamp(2.2rem, 5vw, 3.5rem)",
               fontWeight: 800,
-              color: "#fff",
+              color: "var(--text)",
               letterSpacing: "-0.02em",
               marginBottom: "0.75rem",
             }}
@@ -335,7 +335,7 @@ export default function Portfolio() {
                     style={{
                       fontSize: "1.5rem",
                       fontWeight: 800,
-                      color: "#fff",
+                      color: "var(--text)",
                       lineHeight: 1.2,
                       marginBottom: "0.3rem",
                     }}
@@ -345,7 +345,7 @@ export default function Portfolio() {
                   <div
                     style={{
                       fontSize: "0.88rem",
-                      color: "rgba(255,255,255,0.45)",
+                      color: "var(--text-muted)",
                       marginBottom: "0.9rem",
                     }}
                   >
@@ -399,14 +399,14 @@ export default function Portfolio() {
                 width: "44px",
                 height: "44px",
                 borderRadius: "50%",
-                border: "1px solid rgba(255,255,255,0.15)",
-                backgroundColor: "rgba(0,0,0,0.6)",
+                border: "1px solid var(--arrow-border)",
+                backgroundColor: "var(--arrow-bg)",
                 backdropFilter: "blur(12px)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 cursor: "pointer",
-                color: "#fff",
+                color: "var(--text)",
                 zIndex: 10,
                 transition: "all 0.2s ease",
               }}
@@ -415,8 +415,8 @@ export default function Portfolio() {
                 (e.currentTarget as HTMLButtonElement).style.backgroundColor = "rgba(0,212,255,0.1)";
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(255,255,255,0.15)";
-                (e.currentTarget as HTMLButtonElement).style.backgroundColor = "rgba(0,0,0,0.6)";
+                (e.currentTarget as HTMLButtonElement).style.borderColor = "var(--arrow-border)";
+                (e.currentTarget as HTMLButtonElement).style.backgroundColor = "var(--arrow-bg)";
               }}
             >
               {dir === "prev" ? <ChevronLeft size={20} /> : <ChevronRight size={20} />}
@@ -444,7 +444,7 @@ export default function Portfolio() {
                 borderRadius: "9999px",
                 border: "none",
                 cursor: "pointer",
-                backgroundColor: i === current ? "var(--accent)" : "rgba(255,255,255,0.2)",
+                backgroundColor: i === current ? "var(--accent)" : "var(--text-faint)",
                 transition: "all 0.3s ease",
                 padding: 0,
               }}

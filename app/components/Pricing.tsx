@@ -15,7 +15,7 @@ function PricingRow({ row, index }: { row: PricingTier; index: number }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        borderBottom: "1px solid rgba(255,255,255,0.06)",
+        borderBottom: "1px solid var(--border-subtle)",
         backgroundColor: hovered ? "rgba(0,212,255,0.04)" : "transparent",
         transition: "background 0.2s ease",
       }}
@@ -25,7 +25,8 @@ function PricingRow({ row, index }: { row: PricingTier; index: number }) {
           padding: "1rem 0",
           fontSize: "1rem",
           fontWeight: row.highlight ? 700 : 500,
-          color: row.highlight ? "#fff" : "rgba(255,255,255,0.85)",
+          color: row.highlight ? "var(--text)" : "var(--text)",
+          opacity: row.highlight ? 1 : 0.85,
           whiteSpace: "nowrap",
         }}
       >
@@ -99,7 +100,7 @@ export default function Pricing() {
     <section
       id="pricing"
       style={{
-        backgroundColor: "#0f0f0f",
+        backgroundColor: "var(--bg-alt)",
         padding: "8rem 2rem",
         overflowX: "hidden",
       }}
@@ -129,7 +130,7 @@ export default function Pricing() {
             style={{
               fontSize: "clamp(2.2rem, 5vw, 3.5rem)",
               fontWeight: 800,
-              color: "#fff",
+              color: "var(--text)",
               letterSpacing: "-0.02em",
               marginBottom: "2rem",
               lineHeight: 1.1,
@@ -145,7 +146,7 @@ export default function Pricing() {
               document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
             }
             style={{
-              backgroundColor: "#00E5FF",
+              backgroundColor: "var(--accent)",
               color: "#000",
               fontWeight: 700,
               padding: "12px 28px",
@@ -174,7 +175,7 @@ export default function Pricing() {
         <div style={{ overflowX: "auto", width: "100%" }}>
           <table style={{ width: "100%", borderCollapse: "collapse", minWidth: "340px" }}>
             <thead>
-              <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
+              <tr style={{ borderBottom: "1px solid var(--border)" }}>
                 <th
                   style={{
                     textAlign: "left",
@@ -183,7 +184,7 @@ export default function Pricing() {
                     fontWeight: 600,
                     letterSpacing: "0.15em",
                     textTransform: "uppercase",
-                    color: "rgba(255,255,255,0.3)",
+                    color: "var(--text-faint)",
                   }}
                 >
                   Product
@@ -196,7 +197,7 @@ export default function Pricing() {
                     fontWeight: 600,
                     letterSpacing: "0.15em",
                     textTransform: "uppercase",
-                    color: "rgba(255,255,255,0.3)",
+                    color: "var(--text-faint)",
                   }}
                 >
                   Price
@@ -206,7 +207,7 @@ export default function Pricing() {
                     textAlign: "right",
                     padding: "0.75rem 0",
                     fontSize: "0.7rem",
-                    color: "rgba(255,255,255,0.3)",
+                    color: "var(--text-faint)",
                   }}
                 >
                   &nbsp;
@@ -230,7 +231,7 @@ export default function Pricing() {
             textAlign: "center",
             marginTop: "1.5rem",
             fontSize: "0.82rem",
-            color: "rgba(255,255,255,0.3)",
+            color: "var(--text-faint)",
             lineHeight: 1.6,
           }}
         >
