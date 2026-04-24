@@ -112,7 +112,7 @@ function MacBookMockup({ screenshot, alt }: { screenshot: string; alt: string })
               inset: 0,
               width: "100%",
               height: "100%",
-              objectFit: "cover",
+              objectFit: "contain",
               display: "block",
             }}
           />
@@ -198,7 +198,7 @@ function IPhoneMockup({ screenshot, alt }: { screenshot: string; alt: string }) 
             inset: 0,
             width: "100%",
             height: "100%",
-            objectFit: "cover",
+            objectFit: "contain",
             display: "block",
           }}
         />
