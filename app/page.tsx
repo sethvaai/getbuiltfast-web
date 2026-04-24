@@ -151,7 +151,7 @@ export default function Home() {
         <Portfolio />
         <Pricing />
         <div style={{textAlign:"center",padding:"4rem 2rem"}}>
-        <h2 style={{fontSize:"2rem",fontWeight:700,marginBottom:"1rem"}}>Ready to build?</h2>
+        <h2 style={{fontSize:"2rem",fontWeight:700,marginBottom:"1rem"}}>48 hours. No BS.</h2><p style={{color:"var(--text-muted)",marginBottom:"1.5rem"}}>Brief us today. Your site goes live in 48 hours or we work for free.</p>
         <a href="/start" className="btn-primary" style={{display:"inline-block",padding:"1rem 2rem",fontSize:"1.1rem"}}>Start Your Project →</a>
       </div>
       </main>
