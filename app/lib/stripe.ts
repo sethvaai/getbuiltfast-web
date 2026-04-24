@@ -8,7 +8,7 @@ export function getStripe(): Stripe | null {
   if (!cached) {
     cached = new Stripe(key, {
       // Pin API version so behavior doesn't drift on library upgrade
-      apiVersion: "2025-02-24.acacia" as Stripe.LatestApiVersion,
+      apiVersion: "2025-02-24.acacia",
     });
   }
   return cached;
