@@ -7,7 +7,6 @@ import HowItWorks from "@/app/components/HowItWorks";
 import Products from "@/app/components/Products";
 import Portfolio from "@/app/components/Portfolio";
 import Pricing from "@/app/components/Pricing";
-import ContactForm from "@/app/components/ContactForm";
 import Footer from "@/app/components/Footer";
 
 type Theme = "dark" | "light";
@@ -151,7 +150,10 @@ export default function Home() {
         <Products />
         <Portfolio />
         <Pricing />
-        <ContactForm />
+        <div style={{textAlign:"center",padding:"4rem 2rem"}}>
+        <h2 style={{fontSize:"2rem",fontWeight:700,marginBottom:"1rem"}}>Ready to build?</h2>
+        <a href="/start" className="btn-primary" style={{display:"inline-block",padding:"1rem 2rem",fontSize:"1.1rem"}}>Start Your Project →</a>
+      </div>
       </main>
 
       <Footer />
