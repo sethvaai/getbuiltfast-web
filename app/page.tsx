@@ -100,7 +100,7 @@ export default function Home() {
             </button>
 
             {/* CTA — desktop */}
-            <a href="#contact" className="btn-primary hidden md:inline-flex text-sm py-2">
+            <a href="/start" className="btn-primary hidden md:inline-flex text-sm py-2">
               Start a Project
             </a>
 
@@ -134,7 +134,7 @@ export default function Home() {
               </a>
             ))}
             <a
-              href="#contact"
+              href="/start"
               onClick={() => setMenuOpen(false)}
               className="btn-primary block text-center text-sm py-2"
             >
