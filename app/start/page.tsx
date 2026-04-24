@@ -1,3 +1,4 @@
+import Nav from "../components/Nav";
 import BriefWizard from "../components/BriefWizard";
 
 export const metadata = {
@@ -7,7 +8,8 @@ export const metadata = {
 
 export default function StartPage() {
   return (
-    <main style={{ background: "var(--bg)", color: "var(--text)", minHeight: "100vh" }}>
+    <main style={{ minHeight: "100vh" }}>
+      <Nav />
       <div className="pt-20">
         <BriefWizard />
       </div>
