@@ -2,18 +2,9 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { PRICING, type PricingTier } from "../data/pricing";
 
-const pricingData = [
-  { product: "Landing Page", price: "from €299", key: "landing_page" },
-  { product: "Full Website", price: "from €799", key: "full_website" },
-  { product: "E-Commerce Store", price: "from €1,499", key: "ecommerce", highlight: true },
-  { product: "Mobile App (iOS + Android)", price: "from €1,999", key: "mobile_app" },
-  { product: "Animated Showcase", price: "from €999", key: "animated_showcase" },
-  { product: "AI Avatar Video", price: "from €499", key: "ai_avatar_video" },
-  { product: "Maintenance", price: "from €49/mo", key: "maintenance" },
-];
-
-function PricingRow({ row, index }: { row: (typeof pricingData)[0]; index: number }) {
+function PricingRow({ row, index }: { row: PricingTier; index: number }) {
   const [hovered, setHovered] = useState(false);
   return (
     <motion.tr
@@ -38,7 +29,7 @@ function PricingRow({ row, index }: { row: (typeof pricingData)[0]; index: numbe
           whiteSpace: "nowrap",
         }}
       >
-        {row.product}
+        {row.name}
         {row.highlight && (
           <span
             style={{
@@ -68,7 +59,7 @@ function PricingRow({ row, index }: { row: (typeof pricingData)[0]; index: numbe
           whiteSpace: "nowrap",
         }}
       >
-        {row.price}
+        {row.priceLabel}
       </td>
       <td style={{ padding: "1rem 0", textAlign: "right" }}>
         <button
@@ -223,7 +214,7 @@ export default function Pricing() {
               </tr>
             </thead>
             <tbody>
-              {pricingData.map((row, i) => (
+              {PRICING.map((row, i) => (
                 <PricingRow key={row.key} row={row} index={i} />
               ))}
             </tbody>

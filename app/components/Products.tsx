@@ -3,42 +3,37 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Zap, ShoppingCart, BarChart3, Globe, Calendar, Bot } from "lucide-react";
+import { TIER } from "../data/pricing";
 
 const products = [
   {
+    tierKey: "landing_page",
     icon: Zap,
-    name: "Landing Page",
-    price: "From €299",
     desc: "Convert visitors into customers with a stunning, fast landing page.",
   },
   {
+    tierKey: "ecommerce",
     icon: ShoppingCart,
-    name: "E-Commerce Store",
-    price: "From €799",
     desc: "Full Shopify or custom store with cart, checkout, and payments.",
   },
   {
+    tierKey: "saas_dashboard",
     icon: BarChart3,
-    name: "SaaS Dashboard",
-    price: "From €999",
     desc: "Complex dashboards, analytics, user management — built right.",
   },
   {
+    tierKey: "brand_website",
     icon: Globe,
-    name: "Brand Website",
-    price: "From €499",
     desc: "Multi-page brand presence with CMS integration.",
   },
   {
+    tierKey: "booking_platform",
     icon: Calendar,
-    name: "Booking Platform",
-    price: "From €699",
     desc: "Calendar, scheduling, payments. Done in 48 hours.",
   },
   {
+    tierKey: "ai_app",
     icon: Bot,
-    name: "AI-Powered App",
-    price: "From €1,499",
     desc: "Custom AI integrations, chatbots, automation workflows.",
   },
 ];
@@ -64,10 +59,12 @@ export default function Products() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((p, i) => {
+            const tier = TIER[p.tierKey];
             const Icon = p.icon;
+            const priceDisplay = tier.priceLabel.replace(/^from /, "From ");
             return (
               <motion.div
-                key={p.name}
+                key={p.tierKey}
                 initial={{ opacity: 0, y: 32 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: i * 0.1, duration: 0.5 }}
@@ -93,9 +90,9 @@ export default function Products() {
                 >
                   <Icon size={22} style={{ color: "var(--accent)" }} />
                 </div>
-                <h3 className="text-lg font-bold mb-1">{p.name}</h3>
+                <h3 className="text-lg font-bold mb-1">{tier.name}</h3>
                 <p className="text-sm font-semibold mb-3" style={{ color: "var(--accent)" }}>
-                  {p.price}
+                  {priceDisplay}
                 </p>
                 <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
                   {p.desc}
