@@ -164,7 +164,7 @@ export default function Hero() {
           transition={{ delay: 1.1, duration: 0.5 }}
           className="flex flex-wrap gap-4 justify-center mb-12"
         >
-          <a href="#contact" className="btn-primary text-lg">
+          <a href="/start" className="btn-primary text-lg">
             Start Your Project →
           </a>
           <a href="#portfolio" className="btn-outline text-lg">
