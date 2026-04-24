@@ -8,7 +8,7 @@ export type PricingTier = {
 };
 
 export const PRICING: PricingTier[] = [
-  { key: "landing_page",      name: "Landing Page",               priceLabel: "from €299",    priceFromEuros: 299 },
+  { key: "landing_page",      name: "Landing Page",               priceLabel: "from €499",    priceFromEuros: 499 },
   { key: "full_website",      name: "Full Website",               priceLabel: "from €799",    priceFromEuros: 799 },
   { key: "ecommerce",         name: "E-Commerce Store",           priceLabel: "from €1,499",  priceFromEuros: 1499, highlight: true },
   { key: "saas_dashboard",    name: "SaaS Dashboard",             priceLabel: "from €999",    priceFromEuros: 999 },

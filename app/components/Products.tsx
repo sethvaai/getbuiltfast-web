@@ -8,7 +8,7 @@ const products = [
   {
     icon: Zap,
     name: "Landing Page",
-    price: "From €299",
+    price: "From €499",
     desc: "Convert visitors into customers with a stunning, fast landing page.",
   },
   {

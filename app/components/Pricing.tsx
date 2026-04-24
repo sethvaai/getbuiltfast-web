@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 const pricingData = [
-  { product: "Landing Page", price: "from €299", key: "landing_page" },
+  { product: "Landing Page", price: "from €499", key: "landing_page" },
   { product: "Full Website", price: "from €799", key: "full_website" },
   { product: "E-Commerce Store", price: "from €1,499", key: "ecommerce", highlight: true },
   { product: "Mobile App (iOS + Android)", price: "from €1,999", key: "mobile_app" },

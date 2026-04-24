@@ -154,7 +154,7 @@ export default function Hero() {
           style={{ color: "var(--text-muted)" }}
         >
           AI-powered web agency delivering stunning, production-ready websites from{" "}
-          <span style={{ color: "var(--accent)", fontWeight: 700 }}>€299</span>.
+          <span style={{ color: "var(--accent)", fontWeight: 700 }}>€499</span>.
         </motion.p>
 
         {/* CTAs */}
