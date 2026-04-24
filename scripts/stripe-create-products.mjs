@@ -34,7 +34,7 @@ const stripe = new Stripe(key, {
 
 // Keep this list in sync with app/data/pricing.ts
 const TIERS = [
-  { key: "landing_page",      name: "Landing Page",               euros: 299,  recurring: false },
+  { key: "landing_page",      name: "Landing Page",               euros: 499,  recurring: false },
   { key: "full_website",      name: "Full Website",               euros: 799,  recurring: false },
   { key: "ecommerce",         name: "E-Commerce Store",           euros: 1499, recurring: false },
   { key: "saas_dashboard",    name: "SaaS Dashboard",             euros: 999,  recurring: false },

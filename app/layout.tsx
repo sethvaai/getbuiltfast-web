@@ -12,12 +12,12 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "GetBuiltFast — Your Website Live in 48 Hours",
   description:
-    "AI-powered web agency delivering stunning, production-ready websites from €299. Landing pages, e-commerce, SaaS dashboards — built fast.",
+    "AI-powered web agency delivering stunning, production-ready websites from €499. Landing pages, e-commerce, SaaS dashboards — built fast.",
   keywords: "web agency, website design, fast delivery, 48 hours, landing page, e-commerce, SaaS",
   openGraph: {
     title: "GetBuiltFast — Your Website Live in 48 Hours",
     description:
-      "AI-powered web agency delivering stunning, production-ready websites from €299.",
+      "AI-powered web agency delivering stunning, production-ready websites from €499.",
     type: "website",
   },
 };
