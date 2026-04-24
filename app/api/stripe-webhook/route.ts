@@ -6,7 +6,7 @@ export const runtime = "nodejs";
 
 export async function POST(req: NextRequest) {
   const stripe = getStripe();
-  const secret = process.env.GBF_STRIPE_WEBHOOK_SECRET;
+  const secret = process.env.GBF_STRIPE_WEBHOOK_SECRET_TEST;
   if (!stripe || !secret) {
     return NextResponse.json({ error: "webhook not configured" }, { status: 503 });
   }

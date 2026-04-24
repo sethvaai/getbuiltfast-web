@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
   const stripe = getStripe();
   if (!stripe) {
     return NextResponse.json(
-      { error: "Stripe not configured (GBF_STRIPE_SECRET_KEY missing)" },
+      { error: "Stripe not configured (GBF_STRIPE_SECRET_KEY_TEST missing)" },
       { status: 503 },
     );
   }
