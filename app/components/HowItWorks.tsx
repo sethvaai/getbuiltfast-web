@@ -26,7 +26,7 @@ export default function HowItWorks() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="how-it-works" className="py-24 px-6" ref={ref} style={{ overflowX: "hidden" }}>
+    <section id="how-it-works" className="py-24" ref={ref} style={{ overflowX: "hidden" }}>
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
