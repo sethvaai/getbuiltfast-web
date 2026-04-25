@@ -126,6 +126,21 @@ export async function POST(req: NextRequest) {
     });
     mailError = error ?? null;
     if (mailError) console.error("Resend failed:", mailError.message);
+    // Client confirmation email
+    await resend.emails.send({
+      from: 'noreply@cindervaleventures.com',
+      to: body.email,
+      subject: 'Brief received — GetBuiltFast',
+      html: '<div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px"><h2 style="color:#00d4ff">Brief received.</h2><p>Hi ' + body.name + ',</p><p>We received your brief and will be in touch within 2 hours with next steps.</p><p>Reference: ' + leadId + '</p><p>— GetBuiltFast team</p></div>',
+    });
+
+    // Notify n8n
+    fetch('http://46.250.224.208:5678/webhook/7c40a17e-ff4d-4e1d-b4a3-f4cf8b5c9743', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({name: body.name, email: body.email, project_type: projectLabel}),
+    }).catch(() => {});
+
   } else {
     console.warn("RESEND_API_KEY missing — skipping email notification");
   }
