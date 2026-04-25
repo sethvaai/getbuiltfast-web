@@ -235,7 +235,6 @@ export default function Portfolio() {
         backgroundColor: "var(--bg-alt)",
         paddingBlock: "8rem",
         paddingInline: "2rem",
-        overflowX: "hidden",
       }}
     >
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
