@@ -10,7 +10,7 @@ export default function StartPage() {
   return (
     <main style={{ minHeight: "100vh" }}>
       <Nav />
-      <div className="pt-20">
+      <div className="pt-20 flex justify-center">
         <BriefWizard />
       </div>
     </main>
