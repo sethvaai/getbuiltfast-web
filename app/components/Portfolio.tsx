@@ -70,7 +70,7 @@ const slideVariants = {
 
 function MacBookMockup({ screenshot, alt }: { screenshot: string; alt: string }) {
   return (
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+    <div className="max-w-6xl mx-auto px-6" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
       <div
         style={{
           width: "clamp(260px, 52vw, 540px)",
