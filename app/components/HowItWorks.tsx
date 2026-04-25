@@ -27,7 +27,7 @@ export default function HowItWorks() {
 
   return (
     <section id="how-it-works" className="py-24 px-6" ref={ref} style={{ overflowX: "hidden" }}>
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
